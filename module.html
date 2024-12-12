@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Module Video Player</title>
+    <style>
+        body{
+            padding: 50px;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="player"></div>
+    <script type="module">
+        import Player from './module.js'
+        Player({
+            id: 'player',
+            src: [
+                {
+                    "url":"http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ElephantsDream.mp4",
+                    "title":"By Blender Foundation",
+                    "poster":"http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/images/ElephantsDream.jpg"
+                },{
+                    "url":"https://youtu.be/NbBkTYl6D1c",
+                    "title":"Beyain Natok",
+                    "poster":"https://i.ytimg.com/an_webp/4Ega0tT9Juo/mqdefault_6s.webp?du=3000&sqp=CL7oubkG&rs=AOn4CLBNCqZ7V7l2ExZCGKCez96CfvOWQg"
+                },
+                {
+                    "url":"https://www.youtube.com/watch?v=4Ega0tT9Juo",
+                    "title":"New Natok",
+                    "poster":"https://i.ytimg.com/an_webp/4Ega0tT9Juo/mqdefault_6s.webp?du=3000&sqp=CL7oubkG&rs=AOn4CLBNCqZ7V7l2ExZCGKCez96CfvOWQg"
+                },
+                {
+                    "url":"https://youtu.be/aprAc-UNldo",
+                    "title":"Emergency Bou",
+                    "poster":"https://i.ytimg.com/an_webp/4Ega0tT9Juo/mqdefault_6s.webp?du=3000&sqp=CL7oubkG&rs=AOn4CLBNCqZ7V7l2ExZCGKCez96CfvOWQg"
+                }
+            ],
+            poster: 'https://i.ytimg.com/vi/ECiqd98bGLo/hqdefault.jpg?sqp=-oaymwEbCKgBEF5IVfKriqkDDggBFQAAiEIYAXABwAEG&rs=AOn4CLDH2-SFnWbuoOlWXqT5jzSl9UtK3w',
+            encrypt: false,
+            api_key: 'c28zb2llcXVkZWFyb3I3N2xkZWlnNzBmdWFsMDZodDZj',
+            background: 'darkblue',
+            playback: {
+                speed: [0.5, 1, 1.5, 2],
+                placement:false
+            },
+            // loader:[1,'yellow'],
+            // iconColor:'yellow',
+            backward: true,
+            forward: true,
+            share: true,
+            pip:false,
+            subtitle: [],
+            analytics: {
+                tag: 'G-FKJ9WK8CE5',
+                appName: 'Live-radio'
+            },
+            logo: {
+                url:"https://abdursoft.com/assets/images/logo/abdursoft-f.svg",
+                position:{
+                    position: "absolute",
+                    width: '70px',
+                    height: '65px',
+                    top: "30px",
+                    right:"30px",
+                    zIndex:999999,
+                    borderRadius: "50%",
+                    overflow: "hidden" 
+                }
+            },
+            snap: 'no',
+            vast: false,
+            snapIcon: false,
+            volumeSliderArea: {
+                width: '0px',
+                height: '5px',
+                background: 'gray',
+                cursor: 'pointer',
+                transition: '0.5s',
+                marginLeft: '10px',
+                position: 'relative',
+                transform: "rotate(-90deg)"
+            },
+        })
+    </script>
+</body>
+
+</html>
